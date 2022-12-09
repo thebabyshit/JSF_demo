@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ch5_event:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/ch5_event_war_exploded2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ch5_event" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="javax-inject" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/ch5_event/web/WEB-INF/web.xml" />
+      </element>
+      <element id="javaee-facet-resources" facet="ch5_event/web/Web" />
+    </root>
+  </artifact>
+</component>

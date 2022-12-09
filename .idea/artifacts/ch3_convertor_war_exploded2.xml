@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ch3_convertor:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/ch3_convertor_war_exploded2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ch3_convertor" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="javax-inject" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="ch3_convertor/web/Web" />
+    </root>
+  </artifact>
+</component>

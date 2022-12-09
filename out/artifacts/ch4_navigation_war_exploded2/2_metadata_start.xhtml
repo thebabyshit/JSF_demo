@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+    <center>
+        <h:form>
+            <h:link value="CS2" includeViewParams="true" outcome="2_metadata_end?id=1&amp;name=CS2"/>
+            <br/>
+
+            <h:link value="CS4" includeViewParams="true" outcome="2_metadata_end?id=2&amp;name=CS4"/>
+            <br/>
+
+            <h:link value="SE1" outcome="2_metadata_end">
+                <f:param name="id" value="3"/>
+                <f:param name="name" value="SE1"/>
+            </h:link>
+            <br/>
+
+            <h:link value="NE1" outcome="2_metadata_end">
+                <f:param name="id" value="4"/>
+                <f:param name="name" value="NE1"/>
+            </h:link>
+            <br/>
+        </h:form>
+    </center>
+</h:body>
+</html>

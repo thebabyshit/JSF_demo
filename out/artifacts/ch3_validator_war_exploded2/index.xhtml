@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+    <center>
+        <h:form>
+            UserID:<h:inputText id="ip1" required="true" value="#{user.id}"
+                                requiredMessage="留点东西再走" validatorMessage="数据不合规范" >
+            <f:validateLength minimum="4" maximum="6"/>
+            <h:message for="ip1" style="color: red"/>
+        </h:inputText><br/>
+
+            phoneNumber:<h:inputText id="ip2" value="#{user.phone}" required="true">
+            <f:validateRegex pattern="^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$"/>
+            <f:validator validatorId="validator1"/>
+        </h:inputText><br/>
+
+            Email:<h:inputText id="ip3" value="#{user.email}" required="true">
+            <f:validateRegex pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"/>
+        </h:inputText><br/>
+
+            Password:<h:inputSecret id="p1" value="#{user.pass}" required="true">
+            <f:validateRequired/>
+        </h:inputSecret><br/>
+
+            confrim:<h:inputSecret id="p2" value="#{user.confirm}" validator="#{user.validate}" required="true">
+        </h:inputSecret><br/>
+
+            <h:messages style="color: red"/><br/>
+
+            <h:commandButton value="Submit" action="success"/>
+        </h:form>
+    </center>
+</h:body>
+</html>

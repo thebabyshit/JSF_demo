@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ch3_convertor/ch3_convertor.iml" filepath="$PROJECT_DIR$/ch3_convertor/ch3_convertor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch3_validator/ch3_validator.iml" filepath="$PROJECT_DIR$/ch3_validator/ch3_validator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch4_navigation/ch4_navigation.iml" filepath="$PROJECT_DIR$/ch4_navigation/ch4_navigation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch5_event/ch5_event.iml" filepath="$PROJECT_DIR$/ch5_event/ch5_event.iml" />
+    </modules>
+  </component>
+</project>

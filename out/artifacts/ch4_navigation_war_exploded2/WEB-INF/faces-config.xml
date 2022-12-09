@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                                  http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <!--1.动态导航-->
+    <navigation-rule>
+<!--        <from-view-id>/</from-view-id>-->
+
+        <navigation-case>
+            <from-action>#{bean.selectJudge}</from-action>
+            <from-outcome>great</from-outcome>
+            <to-view-id>/1_great.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-action>#{bean.selectJudge}</from-action>
+            <from-outcome>less</from-outcome>
+            <to-view-id>/1_less.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+<!--    2.ViewAction-->
+    <navigation-rule>
+<!--        <from-view-id>/2_metadata_start.xhtml</from-view-id>-->
+        <navigation-case>
+            <from-action>#{employeeBean.checkId}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/2_metadata_end.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-action>#{employeeBean.checkId}</from-action>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/2_metadata_start.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+<!--    3.conditional_navigation-->
+
+
+    <navigation-rule>
+        <from-view-id>/3_conditional_navigation.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{bean1.selectType}</from-action>
+            <if>#{bean1.flag}</if>
+            <to-view-id>/1_less.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-action>#{bean1.selectType}</from-action>
+            <to-view-id>/1_great.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

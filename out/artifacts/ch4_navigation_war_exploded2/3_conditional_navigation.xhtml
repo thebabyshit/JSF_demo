@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+    <center>
+        <h:form>
+            回家机票购买者姓名：<h:inputText />
+            <br/>
+            折扣类型：
+            <h:selectOneRadio  value="#{bean1.type}">
+                <f:selectItem itemValue="summer" itemLabel="暑假"/>
+                <f:selectItem itemValue="winter" itemLabel="寒假"/>
+            </h:selectOneRadio>
+            <br/>
+            <h:commandButton value="buy" action="#{bean1.selectType}"/>
+        </h:form>
+    </center>
+</h:body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+   <f:phaseListener type="bean.PhaseHandler"/>
+</f:view>
+<h:body>
+   <h:form>
+      <h:outputText value="PhaseEvent"/>
+      <br/>
+      <h:inputText id="it1" value="#{bean.v}">
+         <f:valueChangeListener for="it1" type="bean.ValueChangeHandler"/>
+      </h:inputText>
+      <br/>
+      <h:commandButton id="btn" value="valueChange" action="AutoChange" >
+         <f:actionListener type="bean.ActionHandler"/>
+      </h:commandButton>
+   </h:form>
+</h:body>
+</html>

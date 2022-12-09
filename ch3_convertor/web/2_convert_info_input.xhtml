@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+    <h1>Info</h1>
+      <h:form>
+            <h:inputText id="ip1" value="#{bean1.info}" converter="convertor1">
+<!--                自定义转换器-->
+<!--                <f:converter converterId="convertor1"/>-->
+            </h:inputText>
+           <br/>
+          <h:message for="ip1" style="color: red"/>
+          <br/>
+          <h:commandButton value="2_convert_info_show" action="2_convert_info_show"/>
+      </h:form>
+</h:body>
+</html>
